@@ -4,45 +4,32 @@
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**Fadev Proxy** adalah server proxy sederhana namun powerful yang dibangun di atas Cloudflare Workers. Proxy ini dirancang untuk mengatasi masalah CORS, melakukan web scraping, dan mengakses resource dari berbagai API dengan mudah.
+**Fadev Proxy** is a simple yet powerful proxy server built on Cloudflare Workers. This proxy is designed to bypass CORS issues, perform web scraping, and access resources from various APIs with ease.
 
-## 📋 Daftar Isi
+## ✨ Features
 
-- [Fitur](#-fitur)
-- [Demo](#-demo)
-- [Cara Penggunaan](#-cara-penggunaan)
-- [Panduan Scraping](#-panduan-scraping)
-- [Instalasi Lokal](#-instalasi-lokal)
-- [Deploy ke Cloudflare](#-deploy-ke-cloudflare)
-- [API Reference](#-api-reference)
-- [Contoh Kode](#-contoh-kode)
-- [Tips & Trik](#-tips--trik)
-- [Lisensi](#-lisensi)
-
-## ✨ Fitur
-
-- ✅ **Proxy Sederhana** - Forward request ke URL target dengan mudah
-- ✅ **CORS Enabled** - Semua response memiliki header CORS lengkap
-- ✅ **Support Semua Method** - GET, POST, PUT, DELETE, OPTIONS
-- ✅ **Scraping Ready** - Bisa meneruskan headers untuk kebutuhan scraping
-- ✅ **Halaman Informasi** - Landing page yang informatif dan user-friendly
-- ✅ **Error Handling** - Penanganan error yang baik
-- ✅ **Deploy Mudah** - Siap deploy ke Cloudflare Workers dalam hitungan menit
+- ✅ **Simple Proxy** - Forward requests to target URLs easily
+- ✅ **CORS Enabled** - All responses include complete CORS headers
+- ✅ **All Methods Supported** - GET, POST, PUT, DELETE, OPTIONS
+- ✅ **Scraping Ready** - Forward headers for scraping needs
+- ✅ **Information Page** - User-friendly landing page
+- ✅ **Error Handling** - Proper error management
+- ✅ **Easy Deploy** - Ready to deploy to Cloudflare Workers in minutes
 
 ## 🎯 Demo
 
 **Base URL:** `https://fadev.proxyyy.workers.dev/?url=`
 
-Coba langsung:
-- [Ambil Post #1](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/posts/1)
-- [Ambil Semua Users](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/users)
-- [Ambil Comments](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/comments?postId=1)
+Try it now:
+- [Get Post #1](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/posts/1)
+- [Get All Users](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/users)
+- [Get Comments](https://fadev.proxyyy.workers.dev/?url=https://jsonplaceholder.typicode.com/comments?postId=1)
 
-### Contoh
+### Examples
 ```bash
 # GET request
 curl "https://fadev.proxyyy.workers.dev/?url=https://api.example.com/data"
 
-# Dengan headers kustom
+# With custom headers
 curl -H "User-Agent: Mozilla/5.0" \
      "https://fadev.proxyyy.workers.dev/?url=https://api.example.com/data"
